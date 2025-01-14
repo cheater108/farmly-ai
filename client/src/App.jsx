@@ -4,6 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import DashboardPage from "./pages/DashboardPage";
 import Farms from "./components/Farms";
+import InsightsPage from "./pages/InsightsPage";
 
 function App() {
     return (
@@ -12,10 +13,8 @@ function App() {
                 <Route path="/user" element={<LoginPage />} />
                 <Route path="/user/register" element={<RegisterPage />} />
                 <Route path="/" element={<DashboardPage />}>
-                    <Route path="dashboard" />
                     <Route path="farms" element={<Farms />} />
-                    <Route path="insights" />
-                    <Route path="pro" />
+                    <Route path="insights" element={<InsightsPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>
